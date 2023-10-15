@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>todo Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+   
+    <h1 style="text-align: center">Todo List</h1>
+    <form style="text-align: center;" action="http://localhost:5000/todos" method="POST">
+        <input tex name="description" id="content">
+        <input type="submit" value="Add Todo">
+    </form>
+    {% if todos|length > 0 %}
+    <table>
+        <tr>
+            <th>description</th>
+            <th>date_created</th>
+        </tr>
+        {% for todo in todos %}
+            <tr>
+                <td>{{ todo.description }}</td>
+                <td>{{ todo.date_created }}</td>
+                
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    
+
+    <div class="form">
+        
+    </div>
+</div>
+{% endblock %}
