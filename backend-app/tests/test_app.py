@@ -1,6 +1,8 @@
 import unittest
+
 from flask import Flask
-from app.app import app, db, Todo
+import app
+from app import app, db, Todo
 
 class FlaskTest(unittest.TestCase):
     def setUp(self):

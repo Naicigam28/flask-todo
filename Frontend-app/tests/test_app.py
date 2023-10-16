@@ -1,7 +1,7 @@
 import unittest
 import requests
 from flask import Flask
-from your_flask_app import app  # Replace 'your_flask_app' with the actual name of your Flask app
+from app import app  
 
 class TestApp(unittest.TestCase):
     def setUp(self):
